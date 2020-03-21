@@ -37,10 +37,20 @@ div {
   text-shadow: 1px 1px red;
 }
 
-.rotateimg180 {
-  -webkit-transform:rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+a {
+    text-decoration: none;
+    color:darkred;
+}
+
+.center {
+  text-align: center;
+}
+
+.rotateimg90 {
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin: 80px;
 }
