@@ -24,7 +24,7 @@ body {
 div {
     background: rgb(255, 255, 255);
     width: 790px;
-    padding: 10px 80px;
+    padding: 5px 80px;
     margin: 50px auto;
     border-radius: 20px;
     box-shadow: 4px 4px grey;
@@ -111,16 +111,10 @@ float: left;
 margin: 20px;
 }
 
-.color1 {
-    color: red;
-}
 
-.color2 {
-    color: green;
-}
-
-.color3 {
-    color: purple;
+h3 {
+  color: blue;
+  text-shadow: #000 1px 1px;
 }
 
 .links img:hover {

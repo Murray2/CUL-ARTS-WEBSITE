@@ -1,5 +1,5 @@
 html {
-  background-image: url("cakeImgs/wood.jpg");
+  background: black;
   margin: 0px auto;
 }
 
@@ -8,8 +8,8 @@ body {
   border-left: solid 4px darkgrey;
   border-right: solid 4px darkgrey;
   margin: 0px auto;
-  padding: 20px 160px;
-  width: 600px;
+  padding: 20px 60px;
+  width: 360px;
 }
 
 h1 {
@@ -35,12 +35,4 @@ div {
   font-variant: small-caps;
   color: black;
   text-shadow: 1px 1px red;
-}
-
-.rotateimg180 {
-  -webkit-transform:rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
