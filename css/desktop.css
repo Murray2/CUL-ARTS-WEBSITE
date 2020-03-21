@@ -10,7 +10,7 @@
 
 /* CORE STYLES */
 :root {
-  --primary-color: rgba(13, 110, 139, 0.75);
+  --primary-color: rgba(255, 255, 255, 0.1);
   --overlay-color: rgba(24, 39, 51 , 0.85);
   --menu-speed: 0.75s;
 }
@@ -22,8 +22,20 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Laila', serif;
+  /* text-align: center; */
+  /* padding: 0px;
+  margin: 20px 0px; */
   line-height: 1.4;
+}
+
+section {
+    background: rgb(255, 255, 255);
+    width: 790px;
+    padding: 5px 80px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 4px 4px grey;
 }
 
 .container {
@@ -35,7 +47,7 @@ body {
 
 .showcase {
   background: var(--primary-color);
-  color: #fff;
+  color: black;;
   height: 100vh;
   position: relative;
 }
@@ -226,27 +238,8 @@ body {
 }
 
 /* 
-html {
-    background-image: url("../images/Titan_low_res.bmp");
-    background-repeat: no-repeat;
-    background-color: #32333C;
-}
 
-body {
-    font-family: 'Laila', serif;
-    text-align: center;
-    padding: 0px;
-    margin: 20px 0px;
-}
 
-div {
-    background: rgb(255, 255, 255);
-    width: 790px;
-    padding: 5px 80px;
-    margin: 50px auto;
-    border-radius: 20px;
-    box-shadow: 4px 4px grey;
-}
 
 h1 {
     font-family: 'Quicksand', sans-serif;
