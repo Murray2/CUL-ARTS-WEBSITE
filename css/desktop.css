@@ -1,0 +1,340 @@
+/* Stylesheet */
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+@-ms-viewport {
+  width: device-width ;
+}
+
+/* CORE STYLES */
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --overlay-color: rgba(24, 39, 51 , 0.85);
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.showcase {
+  background: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+.showcase:before {
+  content: '';
+  background: url("../images/Titan_low_res.bmp") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.showcase .showcase-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.showcase h1 {
+  font-size: 4rem;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* MENU STYLES */
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+/* 
+html {
+    background-image: url("../images/Titan_low_res.bmp");
+    background-repeat: no-repeat;
+    background-color: #32333C;
+}
+
+body {
+    font-family: 'Laila', serif;
+    text-align: center;
+    padding: 0px;
+    margin: 20px 0px;
+}
+
+div {
+    background: rgb(255, 255, 255);
+    width: 790px;
+    padding: 5px 80px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 4px 4px grey;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 70px;
+    padding: 10px 150px;
+    margin: auto;
+    text-align: center;
+    color: #32333C;
+    text-shadow: 1px 3px blue;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+h2 {
+    text-shadow: 1px 2px #32333C;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22px;
+    text-align: left;
+}
+
+h4 {
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 150px;
+    margin: auto;
+    text-align: center;
+    color: #32333C;
+    text-shadow: 1px 1px blue;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+li {
+    text-align: left;
+}
+
+p {
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #32333C;
+}
+
+a:hover {
+    color: blue;
+}
+
+ul {
+    text-align: left;
+}
+
+iframe {
+    display: block;
+    background: #000;
+    border: none;
+    height: calc(100vh - 30px);
+    width: 100%;
+}
+
+button {
+    font-family: sans-serif;
+    font-size: 17px;
+    text-decoration: #32333C;
+    font-weight: bold;
+    text-shadow: 0.5px 0.4px blue;
+}
+
+.width {
+    width: 760px;
+}
+
+.main {
+    width: 100%;
+}
+
+.float {
+float: left;
+margin: 20px;
+}
+
+
+h3 {
+  color: blue;
+  text-shadow: #000 1px 1px;
+}
+
+.links img:hover {
+    box-shadow: 2px 2px grey;
+}

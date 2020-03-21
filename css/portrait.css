@@ -1,20 +1,17 @@
-/* Stylesheet */
-html {
-    background-image: url("images/Titan_low_res.bmp");
-    background-repeat: no-repeat;
-    background-color: #32333C;
-}
+
+@media only screen and (max-width: 480px) {
 
 body {
     font-family: 'Laila', serif;
     text-align: center;
     padding: 0px;
     margin: 20px 0px;
+    width: 300px;
 }
 
 div {
     background: rgb(255, 255, 255);
-    width: 790px;
+    width: 280px;
     padding: 10px 80px;
     margin: 50px auto;
     border-radius: 20px;
@@ -23,7 +20,7 @@ div {
 
 h1 {
     font-family: 'Quicksand', sans-serif;
-    font-size: 70px;
+    font-size: 40px;
     padding: 10px 150px;
     margin: auto;
     text-align: center;
@@ -73,13 +70,6 @@ ul {
     text-align: left;
 }
 
-iframe {
-    display: block;
-    background: #000;
-    border: none;
-    height: calc(100vh - 30px);
-    width: 100%;
-}
 
 button {
     font-family: sans-serif;
@@ -118,7 +108,7 @@ margin: 20px;
     box-shadow: 2px 2px grey;
 }
 
-/* Style the tab */
+/* Style the tab  */
 .tab {
     padding: 12px;
     overflow: hidden;
@@ -147,10 +137,11 @@ margin: 20px;
     background-color: rgba(255, 255, 255, 0.8);
   }
   
-  /* Style the tab content */
+  /* Style the tab content*/
   .tabcontent {
     display: none;
     padding: 6px 12px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-top: none;
   }
+}
